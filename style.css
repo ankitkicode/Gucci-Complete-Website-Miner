@@ -1,0 +1,807 @@
+@font-face {
+  font-family: first;
+  src: url(/S6uyw4BMUTPHjx4wXg.woff2);
+}
+@font-face {
+  font-family: two;
+  src: url(/S6uyw4BMUTPHjxAwXjeu.woff2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(206, 191, 191);
+  font-family: gilroy;
+}
+
+#main {
+  overflow: hidden;
+  position: relative;
+  background-color: white;
+}
+#page1 {
+  position: relative;
+  width: 100%;
+  height: 235vh;
+  padding: 0.1px;
+  /* background-color: red; */
+}
+#nav {
+  width: 100%;
+  /* background-color: blue; */
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 30px;
+  padding: 22px 85px;
+  position: fixed;
+  z-index: 999;
+  /* position: relative; */
+  background-color: white;
+}
+#nav i {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#nav svg {
+  fill: black;
+  /* background-color: red; */
+  padding: 10px;
+  scale: 1;
+  /* width: fit-content; */
+  position: fixed;
+  top: 55px;
+  margin-left: 70px;
+}
+
+#main > .menu {
+  padding-left: 80px;
+  padding-top: 60px;
+  position: absolute;
+  top: 0px;
+  height: 100vh;
+  width: 35%;
+  background-color: rgb(255, 255, 255);
+  z-index: 9999;
+  right: -50%;
+  /* display: none; */
+  box-shadow:  0px 3px 5px 2px rgb(211, 209, 209);
+  transition: 1s;
+}
+#main >.menu>a{
+  font-size: 15px;
+  font-weight: 500;
+  font-family: Franklin Gothic;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 6px;
+  transition: 1+s;
+  margin-bottom: 33px;
+  /* overflow: hidden; */
+}
+#main >.menu>a>i{
+  font-size: 20px;
+  display: none;
+  transition: 1s;
+  
+}
+#main >.menu>a:hover i{
+  
+transition: .5s all ease;
+display: block;
+}
+
+#main > .menu >.icon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: black;
+  padding: 10px 11px;
+  color: #fff;
+  font-size: 23px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: 1s;
+}
+#main > .menu > i:hover {
+  padding: 9px 10px;
+  font-size: 24px;
+}
+
+#main>.search{
+  padding: 10px 20px;
+  display: none;
+  height: 45vh;
+  width: 45vw;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 1%;
+  right:6%;
+  z-index: 9999;
+  border-radius: 5px;
+  box-shadow:  0px 3px 5px 2px rgb(211, 209, 209);
+}
+#main>.search>label{
+  font-size: 13px;
+  padding-top: 10px;
+
+}
+#main>.search>label>input{
+  width: 100%;
+  /* text-decoration: none; */
+  border: none;
+  border-bottom: 1px solid black;
+  height: 35px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+}
+#main>.search>.box{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 20px;
+  height: 70%;
+  width: 80%;
+  /* background-color: rgb(93, 109, 104); */
+}
+#main>.search>.box>.box1{
+  display: flex;
+  align-items: start;
+  /* justify-content: center; */
+  flex-direction: column;
+  /* background-color: red; */
+}
+#main>.search>.box>.box1>h1{
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: rgb(75, 75, 74);
+  margin-bottom: 18px;
+}
+#main>.search>.box>.box1>h2{
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  position: relative;
+
+}
+#main>.search>.box>.box1>h2::after{
+  content: "";
+  height: 1px;
+  width: 60%;
+  position: absolute;
+  bottom: -2px;
+  left: 18px;
+  background-color: black;
+}
+
+#main >.profile{
+  display: flex;
+  align-items: start;
+  display: none;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px 15px ;
+  height: 60vh;
+  width: 16vw;
+  background-color: rgb(252, 251, 251);
+  position: absolute;
+  top: 1%;
+  right:6%;
+  z-index: 9999;
+  border-radius: 5px;
+  box-shadow:  0px 3px 5px 2px rgb(211, 209, 209);
+  
+}
+
+#main >.profile>h3{
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  /* position: relative; */
+  transition: .5s;
+  cursor: pointer;
+}
+
+#main >.profile>h3:hover{
+  text-decoration:underline ;
+  transition: .5s;
+}
+
+
+
+#page1 #img-div {
+  background-color: red;
+  /* margin-top: 30%; */
+  width: 60%;
+  height: 150vh;
+  margin: auto;
+  background-image: url(https://media.gucci.com/dynamic/b3c8/hj0zGAzYfmKA5b+KMGgjOzBOqftbqLgl3Ikj+op4yC3i8u28c5adixKclXHOawWXzHh019bgDQKmIqHq8GLu9tU6Qdj3+FaNqIE+9_41B+ymtpnzVeT_W86nlHzroDCMpXQIt4CQC2Dh_wrhugRt+IpFEnyeF4I5uCN97mYf0FZp0t1OwTX_3ZvCYc1FeVybpdAHsyQPRuuwJpED4qjr8_PYunOtb3sUW9bNenkpWaZMBQSx5895Mx_zO3APDzXlpn1lqExvGIqBICl1Z3+hIeL4NYUX63pjRKLWlsfRSTk=/Gucci_Desktop_Routing_2UP_GQJannik-2-July23_3x4.png);
+  background-size: cover;
+  /* animation:changeimg 5s infinite linear ; */
+}
+
+@keyframes changeimg {
+  0% {
+    background-image: url(https://media.gucci.com/dynamic/b3c8/hj0zGAzYfmKA5b+KMGgjOzBOqftbqLgl3Ikj+op4yC3i8u28c5adixKclXHOawWXzHh019bgDQKmIqHq8GLu9tU6Qdj3+FaNqIE+9_41B+ymtpnzVeT_W86nlHzroDCMpXQIt4CQC2Dh_wrhugRt+IpFEnyeF4I5uCN97mYf0FZp0t1OwTX_3ZvCYc1FeVybpdAHsyQPRuuwJpED4qjr8_PYunOtb3sUW9bNenkpWaZMBQSx5895Mx_zO3APDzXlpn1lqExvGIqBICl1Z3+hIeL4NYUX63pjRKLWlsfRSTk=/Gucci_Desktop_Routing_2UP_GQJannik-2-July23_3x4.png);
+    background-size: cover;
+  }
+  50% {
+    background-image: url(https://media.gucci.com/dynamic/b3c8/6w5c20YC6pJMA3l52D7idovgwp6ckPlW+myA5i96A4RerBZTD1xfRwgOye+yeg2UOpDr4CXrnEX1ZVhmMjiVLwkeYK__a6lT54B0AqG8BBzm1qQPbAK2Cu00RcdbcBVMfhdnWG8UMVP65X674gJJ63zTv5+qBiimY5wQmrh5FPWG0OHnSufwK2dtmHLAJ8W7Yx6yZg4HLSbjX3TjYC1Vd4vWgkXoqNYvm_2G5dcV6n3ohCB+6+7qPMfxTAS292cu/Portrait_Horsebit-4-Default.png);
+    background-size: cover;
+  }
+  100% {
+    background-image: url(https://media.gucci.com/dynamic/b3c8/16UmSXGt_tJeGQoWflxiclkiQ50LtrG+gtDDCrFrSXXIeEb4zQf9E3_hYKnB30GdZG3_fTPuvlhlb7Np266T8z9TDbdix+FWN0hqLGdT6Ca075OnqJyNHVdKW1HRGXX0Z94IEGsnqZN3IJ8fn1QFvePpCQT0m6N6OdT3jpD1KrOpOMxQknG_8+H3v_sbIlZAKncx3k_OGPwppnH_9uCRGvx9y6KlLvE9AX5hkUZzo5vNza_Mznv_vTrlK8hTfhwNaAy3IQO4ucAqoqBO2weTQOXul1jI7M4Wy2njzobwVyQ=/Gucci_HP-20June23_AceJune23_Carousel_Desktop_.png);
+    background-size: cover;
+  }
+}
+
+#nav h4 {
+  font-size: 12px;
+  font-weight: 500;
+  align-self: flex-start;
+  position: absolute;
+  left: 60px;
+  color: rgb(58, 58, 58);
+  text-decoration: underline;
+  /* visibility: hidden; */
+  opacity: 0;
+}
+#page1>.container2{
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  position: fixed;
+  bottom: 5%;
+  left: 40%;
+  height: 200px;
+  width: 300px;
+  /* background-color: rgba(230, 214, 214, 0.897); */
+  /* mix-blend-mode: difference; */
+}
+#page1>.container2>h2{
+  font-size: 40px;
+  font-weight: 500;
+  font-family: first;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+#page1>.container2>button{
+  padding: 10px 20px;
+  font-size: 15px;
+  font-family: gilroy;
+  color: black;
+  border: none;
+  background-color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  mix-blend-mode: difference;
+  cursor: pointer;
+}
+
+#page2 {
+  padding: .1px;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+}
+#page2>h1{
+  position: relative;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: first;
+  cursor: pointer;
+}
+#page2>h1::after{
+  content: "";
+  height: 1px;
+  width: 0%;
+  background-color: black;
+  position: absolute;
+  bottom: -.3pc;
+  left: 37.5%;
+  cursor: pointer;
+  transition: .5s;
+}
+#page2>h1:hover::after{
+  width: 25%;
+  cursor: pointer;
+}
+#page2>.center{
+  position: relative;
+  margin-top: 50px;
+  margin-left: 10%;
+  height: 80%;
+  width: 80%;
+  /* background-color: red; */
+}
+
+/* slider */
+
+img {vertical-align: middle;}
+          
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+#image{
+  height: 500px;
+  width: 60%;
+  margin-left: 20%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: rgb(5, 5, 5);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: #f2f2f2;
+}
+
+/* Caption text */
+.text {
+  color: #0a0a0a;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #a19e9e;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #aaaaaa;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #5a5a5a;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/* End  slider */
+
+
+.page3{
+  position: relative;
+  height: 140vh;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+}
+.page3>.line{
+  height: 3px;
+  width: 20%;
+  margin-left: 40%;
+  margin-top: 60px;
+  border-radius: 50px;
+  background-color: rgb(184, 181, 181);
+}
+.page3>.line>.line-cover{
+  height: 100%;
+  width: 30%;
+  background-color: #0a0a0a;
+}
+.page3>.center3{
+  padding: 10px;
+  grid-gap: 10px ;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 20px;
+  height: 98%;
+  width: 100%;
+  /* background-color: rgb(204, 193, 193); */
+}
+.page3>.center3>.box1{
+  position: relative;
+  background-color: rgb(116, 81, 151);
+  background-image: url(https://media.gucci.com/dynamic/b3c8/5hwrbIPTo+EoeKDLjG5Xf_yTYV8poiqVzx2YAMeBDeYMOfmLdcS2eeucM9MoxK5S68Y3TDozp2DWxZHbjgKdLUcIzER_JMth7TvfasbgVBrB1arzWlHgUa5ESSoul03zGfyKq9GiOfThmxKu0mgnzz1dw+YRWvhEWDUpaX0gYXEnRdnguTqXCHwiK_AE2gd4OucZG0ssj6jJKBnkzYBbyhE7gOPSTpJgs7j1ye9HFIe7F2_X4cJAoCkS_7r1bgbPvUBbS9fKKFvYm0Ar3jpdh77j2nAtHnhMOIauIGrs7EcnL9BgiwzodZF8e5F+VoBY/Gucci_Desktop_Routing_2UP_754136BKO006701_July23_3x4.png);
+  background-size: cover;
+  background-position: center;
+}
+.page3>.center3>.box{
+  position: relative;
+  background-color: rgb(116, 81, 151);
+  background-image: url(https://media.gucci.com/dynamic/b3c8/zfAlFqZdFJJW1lo689iJkaJyst_i0AUGKpZ4OCbpXhtFVP1pjFYBBbXl0gAO1jXB+gTgwZYZb2pyKjZzI8RgHarii_uQZijctaIMxo7uoT4P0zWu4EfjKOSdNUratD5Oxl9SV9yvcUY2H+J56_CbljDRo1kxXeiZQbebwoWtPV1Rqm7KHvxuXIGW_eTnjX2WqQiA76xq49QZ+nUYXEWHPnVmBk2YLi3odtYtjc2D6dwNVNe2pFp4EbwSNe+XFtSfLMihzTbOzpk2YxPTQz1Lfg==/Portrait_Oshkosh-20230717_001_Default.png);
+  background-size: cover;
+  background-position: center;
+  margin-right: 10px;
+}
+
+.page3>.center3>.box1>h2{
+  
+  font-size: 17px;
+  color: #fff;
+  font-family: first;
+  font-weight: 600;
+  margin-top: 50px;
+  margin-left: 45%;
+  letter-spacing: 1px;
+}
+.page3>.center3>.box>h2{
+  font-size: 17px;
+  color: #fff;
+  font-family: first;
+  font-weight: 600;
+  margin-top: 50px;
+  margin-left: 45%;
+  letter-spacing: 1px;
+}
+.page3>.center3>.box1>.container{
+  text-align: center;
+  margin-left: 40%;
+  position: absolute;
+  bottom: 5%;
+  /* background-color: rgb(109, 128, 121); */
+}
+.page3>.center3>.box1>.container>h1{
+  text-transform: uppercase;
+
+      font-size: 45px;
+      color: #fff;
+      font-weight: 500;
+      font-family: first;
+      letter-spacing: 1px;
+}
+.page3>.center3>.box1>.container>button{
+  padding: 10px 25px;
+  margin-top: 10px;
+  background-color: rgb(231, 231, 231);
+  color: #222121;
+  border: none;
+  font-size: 15px;
+}
+.page3>.center3>.box1>.container>button:hover{
+  background-color: #292828;
+  color: #fff;
+  transition: .5s;
+  cursor: pointer;
+
+}
+.page3>.center3>.box>.container>button:hover{
+  background-color: #292828;
+  color: #fff;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.page3>.center3>.box>.container{
+  text-align: center;
+  margin-left: 30%;
+  position: absolute;
+  bottom: 5%;
+  /* background-color: rgb(109, 128, 121); */
+}
+.page3>.center3>.box>.container>h1{
+  text-transform: uppercase;
+      font-size: 45px;
+      color: #fff;
+      font-weight: 500;
+      font-family: first;
+      letter-spacing: 1px;
+}
+.page3>.center3>.box>.container>button{
+  padding: 10px 25px;
+  margin-top: 10px;
+  background-color: rgb(231, 231, 231);
+  color: #111111;
+  border: none;
+  font-size: 15px;
+}
+
+.page4{
+  position: relative;
+  height: 140vh;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+}
+.page4>h3{
+  margin-top: 40px;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: first;
+
+
+}
+.page4>img{
+  margin-top:8%;
+  margin-left: 4%;
+  height: 800px;
+  width: 600px;
+  object-fit: cover;
+  transition: .3s;
+  cursor: pointer;
+  
+}
+.page4>img:hover{
+  
+  scale: 1.05;
+  overflow: hidden;
+}
+
+.page4>.container{
+  text-align: center;
+  position: absolute;
+  top: 38%;
+  right: 15%;
+  height: 250px;
+  width: 400px;
+  /* background-color: rebeccapurple; */
+}
+.page4>.container>h2{
+  font-size: 48px;
+  font-family: first;
+  font-weight: 400;
+  margin-bottom: 20px;
+  /* word-spacing: 10px; */
+  /* letter-spacing: 1px; */
+}
+.page4>.container>p{
+  font-family: two;
+  font-weight: 600;
+  font-size: 16px;
+  
+}
+.page4>.container>button{
+  margin-top: 20px;
+  padding: 10px 28px;
+  background-color: #22222200;
+  color: #030303;
+  font-weight: 600;
+  font-family: first;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+}
+
+.page5{
+  position: relative;
+  height: 150vh;
+  width: 100%;
+  background-color: black;
+}
+.page5>.top{
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: 25% 25% 50%;
+  height: 90vh;
+  width: 100%;
+}
+.page5>.top>.box{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: start;
+  padding-left: 90px;
+  padding-top: 20px;
+
+}
+.page5>.top>.box>h2{
+  font-size: 14px;
+  color: #afacac;
+}
+.page5>.top>.box>a{
+  position: relative;
+  font-size: 12px;
+  font-family: first;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  text-decoration: none;
+}
+.page5>.top>.box>a::after{
+content: "";
+height: 1px;
+width: 100%;
+background-color: #fff;
+position: absolute;
+bottom: -2px;
+right: 0px;
+transition: .5s;
+}
+.page5>.top>.box>a:hover::after{
+  width: 0%;
+}
+.page5>.top>.box>h3{
+  margin-top: 50%;
+  font-size: 14px;
+  color: #afacac;
+}
+.page5>.top>.box>h4{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 450px;
+  /* margin-top: 50%; */
+  font-size: 14px;
+  color: #afacac;
+  border-bottom:1px solid grey ;
+  padding-bottom: 15px;
+  cursor:text;
+}
+.page5>.top>.box>h4::after{
+  content: "";
+  height: 1px;
+  width: 0%;
+  background-color: ghostwhite;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transition: 1s;
+  
+}
+
+.page5>.top>.box>h4:hover::after{
+  width: 100%;
+}
+
+.page5>.top>.box>h5{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 550px;
+  /* margin-top: 50%; */
+  font-size: 14px;
+  color: #afacac;
+  border-bottom:1px solid grey ;
+  padding-bottom: 15px;
+  cursor:text;
+}
+.page5>.top>.box>h5::after{
+  content: "";
+  height: 1px;
+  width: 0%;
+  background-color: ghostwhite;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transition: 1s;
+  
+}
+
+.page5>.top>.box>h5:hover::after{
+  width: 100%;
+}
+
+
+
+.page5>.top>.box>p{
+  position: relative;
+  font-size: 11px;
+  font-family: first;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  text-decoration: none;
+}
+.page5>.bottom{
+  position: relative;
+  height: 60vh;
+  width: 100%;
+  background-color: rgb(2, 2, 2);
+}
+
+.page5>.bottom>.top{
+  margin-left: 5%;
+  height: 100px;
+  width: 400px;
+  /* background-color: #726d6d; */
+  display: flex;
+  align-items: center;
+  /* justify-content: ; */
+  gap: 20px;
+}
+.page5>.bottom>p{
+  position: relative;
+  font-size: 11px;
+  font-family: first;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 5%;
+
+
+}
+.page5>.bottom>svg{
+  margin-top: 30px;
+  fill: #fff;
+  padding: 30px 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
